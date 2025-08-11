@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MainScene" extends="Scene">
+  <interface>
+    <field id="m3uUrl" type="string" onChange="onM3UUrlChanged" />
+    <field id="playlist" type="node" />
+  </interface>
+
+  <children>
+    <Rectangle id="bg" color="0xFF111111" width="1280" height="720" />
+
+    <Label
+      id="title"
+      text="M3U Player"
+      translation="[40,30]"
+      width="1200"
+      height="60"
+      horizAlignment="left"
+      font="font:MediumBold"
+      />
+
+    <Label
+      id="status"
+      text="Enter remote M3U URL (or leave blank to use default): Press OK to load."
+      translation="[40,100]"
+      width="1200"
+      height="30"
+      font="font:Small"
+      />
+
+    <MarkupList
+      id="streamList"
+      translation="[40,150]"
+      width="1200"
+      height="420"
+      itemSize="[1200,60]"
+      drawFocus="true"
+      />
+  </children>
+</component>
